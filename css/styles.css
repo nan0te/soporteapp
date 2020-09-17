@@ -1,0 +1,49 @@
+body{
+    background-color: #fff;
+    color:	#9ACD32;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+}
+
+.text {
+
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    
+
+}
+.square {
+    width: 5rem;
+    height: 5rem;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: expand 3s ease infinite;
+  }
+  
+  .square-1 {
+    animation-delay: 0.5s;
+  }
+  .square-2 {
+    animation-delay: 1s;
+  }
+  .square-3 {
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes expand {
+    0% {
+      transform: scale(0.1) rotate(45deg);
+      border: 0.3rem #fff solid;
+    }
+    50% {
+      border: 0.3rem 	#ADFF2F solid;
+    }
+    100% {
+      transform: scale(1) rotate(270deg);
+      border: 0.3rem transparent solid;
+    }
+  }
