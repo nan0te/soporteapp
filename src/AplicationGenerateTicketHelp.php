@@ -18,9 +18,9 @@ include_once 'GenerateTicketHelpController.php';
             $array = $getsub->arr_subject;
     
             foreach ($array as $subject) {
-                $appgthc->GenerateTicket($subject, '1');
-                $appgthc->Response_mail_ticket();
+                $appgthc->GenerateTicket($subject, '1');  
             } 
+            $appgthc->Response_mail_ticket();
         }
     }
 ?>

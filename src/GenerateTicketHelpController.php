@@ -103,12 +103,15 @@ include_once  __DIR__.'/config/config.php';
             $array_id = array();
 
             if ($res = $conn->query($query)) {
+                
+                $body_messages = new BodyMessages();
+
                 while ( $obj = $res->fetch_object() ) {
+                    
                     $to = explode(" ", $obj->account);
                     $s = array("<",">");
                     $a = str_replace($s,"",$to[2]);
 
-                    $body_messages = new BodyMessages();
                     $sender = new SendMail($a,"", 'No contestar este mensaje.', $body_messages->automaticGenerateTicket);
                     $sender->send_mail();
                     
